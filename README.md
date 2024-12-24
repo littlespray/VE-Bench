@@ -8,9 +8,9 @@ Shangkun Sun, Xiaoyu Liang, Songlin Fan, Wenxu Gao, Wei Gao* <br>
 from MMCAL, Peking University
 </div>
 
-<div align="center">
+<!-- <div align="center">
 <video src="assets/demo.mp4"></video>
-</div>
+</div> -->
 
 ## 🎦 Introduction
 TL;DR: VE-Bench is an evaluation suite for text-driven video editing, consisting of a quality assessment model to provide a human-aligned metric for edited videos, and a database containing rich video-prompt pairs and the corresponding human scores.
@@ -29,22 +29,41 @@ VE-Bench DB contains a rich collection of source videos, including real-world vi
 Left: Average score distributions of 8 editing methods. &emsp; &emsp; Right: Performance on different types of prompts from previous video-editing methods.
 </div>
 
-## 💼 Model Preparation
-Download all models from [google drive](https://drive.google.com/drive/folders/1kD82Ex90VP9A_AqjYV1J5DYvBQW-hkXa?usp=sharing) and put them into ``ckpts``.
-
-## ✨ Usage
-### Evaluate one single video
+## Easy Use
+VE-Bench can be installed with a single ``pip`` command. Since the model employs normalization during training, its output does not represent absolute scores. We **recommend performing comparisons between video pairs**, as demonstrated below:
 ```
-python infer.py --single_test --src_path ${path_to_source_video} --dst_path ${path_to_dst_video} --prompt ${editing_prompt}
+pip install vebench
+```
+When comparing videos:
+```
+from vebench import VEBenchModel
+
+evaluator = VEBenchModel()
+
+score1 = evaluator.evaluate('A black-haired boy is turning his head', 'assets/src.mp4', 'assets/dst.mp4')
+score2 = evaluator.evaluate('A black-haired boy is turning his head', 'assets/src.mp4', 'assets/dst2.mp4')
+print(score1, score2) # Score1: 1.3563, Score2: 0.66194
+```
+
+
+## Local Inference
+
+### 💼 Preparation
+. You can also download all checkpoints from [google drive](https://drive.google.com/drive/folders/1kD82Ex90VP9A_AqjYV1J5DYvBQW-hkXa?usp=sharing) and put them into ``ckpts``.
+
+### ✨ Usage
+To evaluate one single video:
+```
+python -m infer.py --single_test --src_path ${path_to_source_video} --dst_path ${path_to_dst_video} --prompt ${editing_prompt}
 
 # Run on example videos
-# python infer.py --single_test --src_path "./data/src/00433tokenflow_baby_gaze.mp4" --dst_path "./data/edited/00433tokenflow_baby_gaze.mp4" --prompt "A black-haired boy is turning his head" 
+# python -m infer.py --single_test --src_path "./data/src/00433tokenflow_baby_gaze.mp4" --dst_path "./data/edited/00433tokenflow_baby_gaze.mp4" --prompt "A black-haired boy is turning his head" 
 ```
 
 
-### Evaluate a set of videos
+To evaluate a set of videos:
 ```
-python infer.py --data_path ${path_to_data_folder} --label_path ${path_to_prompt_txt_file}
+python -m infer.py --data_path ${path_to_data_folder} --label_path ${path_to_prompt_txt_file}
 ```
 
 ## 🙏 Acknowledgements
