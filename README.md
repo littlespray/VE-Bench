@@ -34,7 +34,7 @@ VE-Bench can be installed with a single ``pip`` command. Since the model employs
 ```
 pip install vebench
 ```
-When comparing videos:
+When comparing videos, you can use ``python test.py``, namely:
 ```
 from vebench import VEBenchModel
 
