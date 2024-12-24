@@ -49,7 +49,11 @@ print(score1, score2) # Score1: 1.3563, Score2: 0.66194
 ## Local Inference
 
 ### 💼 Preparation
-. You can also download all checkpoints from [google drive](https://drive.google.com/drive/folders/1kD82Ex90VP9A_AqjYV1J5DYvBQW-hkXa?usp=sharing) and put them into ``ckpts``.
+``
+cd vebench
+``
+
+You can also download all checkpoints from [google drive](https://drive.google.com/drive/folders/1kD82Ex90VP9A_AqjYV1J5DYvBQW-hkXa?usp=sharing) and put them into ``ckpts``.
 
 ### ✨ Usage
 To evaluate one single video:
