@@ -30,7 +30,7 @@ Left: Average score distributions of 8 editing methods. &emsp; &emsp; Right: Per
 </div>
 
 ## Easy Use
-VE-Bench can be installed with a single ``pip`` command. Since the model employs normalization during training, its output does not represent absolute scores. We **recommend performing comparisons between video pairs**, as demonstrated below:
+VE-Bench can be installed with a single ``pip`` command. Since the model employs normalization during training, its output does not represent absolute 1 \~ 10 scores, as demonstrated below:
 ```
 pip install vebench
 ```
