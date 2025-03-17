@@ -30,7 +30,7 @@ Left: Average score distributions of 8 editing methods. &emsp; &emsp; Right: Per
 </div>
 
 ## Easy Use
-VE-Bench can be installed with a single ``pip`` command. Since the model employs normalization during training, its output does not represent exactly absolute 1 \~ 10 scores, as demonstrated below:
+VE-Bench can be installed with a single ``pip`` command.
 ```
 pip install vebench
 ```
@@ -44,6 +44,7 @@ score1 = evaluator.evaluate('A black-haired boy is turning his head', 'assets/sr
 score2 = evaluator.evaluate('A black-haired boy is turning his head', 'assets/src.mp4', 'assets/dst2.mp4')
 print(score1, score2) # Score1: 1.3563, Score2: 0.66194
 ```
+Since the model employs normalization during training, its output does not represent exactly absolute 1 \~ 10 scores, as demonstrated above.
 
 VE-Bench DB is available [here](https://pan.baidu.com/s/1D5y6ADXgz8PPHGCxROlNIQ?pwd=sggc).
 
