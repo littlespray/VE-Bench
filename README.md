@@ -45,6 +45,8 @@ score2 = evaluator.evaluate('A black-haired boy is turning his head', 'assets/sr
 print(score1, score2) # Score1: 1.3563, Score2: 0.66194
 ```
 
+VE-Bench DB is available [here](https://pan.baidu.com/s/1D5y6ADXgz8PPHGCxROlNIQ?pwd=sggc).
+
 
 ## Local Inference
 
