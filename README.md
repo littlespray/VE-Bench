@@ -46,7 +46,8 @@ print(score1, score2) # Score1: 1.3563, Score2: 0.66194
 ```
 Since the model employs normalization during training, its output does not represent exactly absolute 1 \~ 10 scores, as demonstrated above.
 
-VE-Bench DB is available [here](https://pan.baidu.com/s/1D5y6ADXgz8PPHGCxROlNIQ?pwd=sggc).
+## Database
+VE-Bench DB is available here. [baidu netdisk](https://pan.baidu.com/s/1D5y6ADXgz8PPHGCxROlNIQ?pwd=sggc) | [google drive](https://drive.google.com/file/d/1SBmXK6XKuyGTaV9LUQXfy5w82bsA3Nve/view?usp=sharing)
 
 
 ## Local Inference
