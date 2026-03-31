@@ -5,7 +5,6 @@ Shangkun Sun, Xiaoyu Liang, Songlin Fan, Wenxu Gao, Wei Gao* <br>
 
 (* Corresponding author)<br>
 
-from MMCAL, Peking University
 </div>
 
 <!-- <div align="center">
